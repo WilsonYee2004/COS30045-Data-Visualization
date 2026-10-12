@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4.3 - D3 Set Up</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            padding: 40px 20px; 
+            margin: 0;
+            background: linear-gradient(135deg, #e0f8e9 0%, #c4e0e5 100%);
+            min-height: 100vh;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .dashboard-panel {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 1300px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        /* Step 2: 添加响应式 SVG 容器的 CSS 类 */
+        .responsive-svg-container {
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+            max-width: 1200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-panel">
+        <h1>Energy Consumption Dashboard</h1>
+
+        <!-- Step 2: 用于承载 D3 生成的 SVG 画布容器 -->
+        <div class="responsive-svg-container"></div>
+    </div>
+
+    <!-- 引入 D3.js 库和您的 main.js 文件 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
