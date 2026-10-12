@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4.1 - SVG House</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/PowerIcon.png">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/PowerIcon.png" alt="Power logo">
+        Appliance Energy
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Data Visuals ▾</a>
+          <div class="dropdown-content" id="tvDropdown">
+            <a href="svg-house.html">Vector Graphics (SVG)</a>
+            <a href="televisions.html">Energy Data Story</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 style="text-align: center; margin-bottom: 40px;">Exercise 4.1: My SVG House</h1>
+    <div class="layout-container">
+        <div class="layout-column">
+            <div class="card">
+                <h2>Before: Clean SVG Drawing</h2>
+                <div class="svg-wrapper">
+                    <svg class="clean-svg" width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0" y="0" width="500" height="300" fill="#87CEEB" />
+                        <rect x="0" y="300" width="500" height="200" fill="#228B22" />
+                        <circle cx="420" cy="80" r="40" fill="yellow" />
+                        <line x1="420" y1="30" x2="420" y2="10" stroke="yellow" stroke-width="4" />
+                        <line x1="420" y1="130" x2="420" y2="150" stroke="yellow" stroke-width="4" />
+                        <line x1="370" y1="80" x2="350" y2="80" stroke="yellow" stroke-width="4" />
+                        <line x1="470" y1="80" x2="490" y2="80" stroke="yellow" stroke-width="4" />
+                        <rect x="80" y="240" width="20" height="80" fill="#8B4513" />
+                        <ellipse cx="90" cy="220" rx="45" ry="35" fill="#006400" />
+                        <rect x="310" y="130" width="30" height="70" fill="#B22222" stroke="black" stroke-width="1" />
+                        <rect x="150" y="200" width="200" height="150" fill="#D2B48C" stroke="#8B4513" stroke-width="2" />
+                        <polygon points="130,200 250,100 370,200" fill="#8B4513" />
+                        <rect x="225" y="270" width="50" height="80" fill="#A0522D" stroke="black" stroke-width="2" />
+                        <circle cx="265" cy="315" r="4" fill="black" />
+                        <g fill="#ADD8E6" stroke="#4682B4" stroke-width="4">
+                            <rect width="40" height="40" transform="translate(170, 220)" />
+                            <rect width="40" height="40" transform="translate(290, 220)" />
+                        </g>
+                        <path d="M 250 350 Q 180 430 250 500" fill="none" stroke="#DAA520" stroke-width="12" />
+                        <text x="380" y="290" font-family="Arial" font-size="24" fill="black" font-weight="bold">House</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Annotation (Before)</h2>
+                <div class="svg-wrapper">
+                    <img src="assets/img/House1.png" alt="Annotated Clean House Drawing">
+                </div>
+            </div>
+        </div>
+        <div class="layout-column">
+            <div class="card">
+                <h2>After: Sunset & Details</h2>
+                <div class="svg-wrapper">
+                    <svg class="enhanced-svg" width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#FF7E67" />
+                                <stop offset="100%" stop-color="#FFDAB9" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="0" y="0" width="500" height="300" fill="url(#sunset)" />
+                        <rect x="0" y="300" width="500" height="200" fill="#1A661A" />
+                        <g fill="#FFFFFF" opacity="0.6">
+                            <ellipse cx="120" cy="80" rx="30" ry="20" />
+                            <ellipse cx="150" cy="70" rx="40" ry="25" />
+                            <ellipse cx="180" cy="80" rx="30" ry="20" />
+                            <ellipse cx="300" cy="50" rx="25" ry="15" />
+                            <ellipse cx="330" cy="45" rx="35" ry="20" />
+                            <ellipse cx="360" cy="50" rx="25" ry="15" />
+                        </g>
+                        <g stroke="#333333" stroke-width="2" stroke-linecap="round" fill="none">
+                            <path d="M 50 120 Q 60 110 70 120 Q 80 110 90 120" />
+                            <path d="M 220 60 Q 225 55 230 60 Q 235 55 240 60" />
+                            <path d="M 260 90 Q 270 80 280 90 Q 290 80 300 90" />
+                        </g>
+                        <circle cx="420" cy="180" r="40" fill="#FF4500" />
+                        <rect x="80" y="240" width="20" height="80" fill="#6B3410" />
+                        <ellipse cx="90" cy="220" rx="45" ry="35" fill="#004d00" />
+                        <circle cx="75" cy="210" r="5" fill="#FF3333" />
+                        <circle cx="95" cy="200" r="5" fill="#FF3333" />
+                        <circle cx="110" cy="225" r="5" fill="#FF3333" />
+                        <circle cx="65" cy="230" r="5" fill="#FF3333" />
+                        <rect x="310" y="130" width="30" height="70" fill="#8B1A1A" stroke="black" stroke-width="1" />
+                        <rect x="150" y="200" width="200" height="150" fill="#BFA07A" stroke="#6B3410" stroke-width="2" />
+                        <polygon points="130,200 250,100 370,200" fill="#6B3410" />
+                        <rect x="225" y="270" width="50" height="80" fill="#8B4513" stroke="black" stroke-width="2" />
+                        <circle cx="265" cy="315" r="4" fill="black" />
+                        <g fill="#FFFACD" stroke="#B8860B" stroke-width="4">
+                            <rect width="40" height="40" transform="translate(170, 220)" />
+                            <rect width="40" height="40" transform="translate(290, 220)" />
+                        </g>
+                        <path d="M 250 350 Q 180 430 250 500" fill="none" stroke="#B8860B" stroke-width="12" />
+                        <g transform="translate(150, 420)">
+                            <line x1="0" y1="0" x2="0" y2="15" stroke="green" stroke-width="2"/>
+                            <circle cx="-4" cy="-4" r="4" fill="#FF69B4"/>
+                            <circle cx="4" cy="-4" r="4" fill="#FF69B4"/>
+                            <circle cx="-4" cy="4" r="4" fill="#FF69B4"/>
+                            <circle cx="4" cy="4" r="4" fill="#FF69B4"/>
+                            <circle cx="0" cy="0" r="3" fill="yellow"/>
+                        </g>
+                        <g transform="translate(350, 420)">
+                            <line x1="0" y1="0" x2="0" y2="15" stroke="green" stroke-width="2"/>
+                            <circle cx="-4" cy="-4" r="4" fill="#87CEFA"/>
+                            <circle cx="4" cy="-4" r="4" fill="#87CEFA"/>
+                            <circle cx="-4" cy="4" r="4" fill="#87CEFA"/>
+                            <circle cx="4" cy="4" r="4" fill="#87CEFA"/>
+                            <circle cx="0" cy="0" r="3" fill="yellow"/>
+                        </g>
+                        <g transform="translate(420, 360)">
+                            <line x1="0" y1="0" x2="0" y2="15" stroke="green" stroke-width="2"/>
+                            <circle cx="-4" cy="-4" r="4" fill="#FFA500"/>
+                            <circle cx="4" cy="-4" r="4" fill="#FFA500"/>
+                            <circle cx="-4" cy="4" r="4" fill="#FFA500"/>
+                            <circle cx="4" cy="4" r="4" fill="#FFA500"/>
+                            <circle cx="0" cy="0" r="3" fill="yellow"/>
+                        </g>
+                        <text x="380" y="290" font-family="Arial" font-size="24" fill="black" font-weight="bold">House</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Annotation (After)</h2>
+                <div class="svg-wrapper">
+                    <img src="assets/img/House2.png" alt="Annotated Enhanced House Drawing">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card" style="margin-top: 40px; text-align: left; max-width: 1300px; margin-left: auto; margin-right: auto;">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Before</th>
+                    <th>After</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sky Background (&lt;rect&gt;)</td>
+                    <td><strong>fill="#87CEEB"</strong></td>
+                    <td><strong>fill="url(#sunset)"</strong></td>
+                </tr>
+                <tr>
+                    <td>Sun (&lt;circle&gt;)</td>
+                    <td><strong>cx=420, cy=80, fill="yellow"</strong></td>
+                    <td><strong>cx=420, cy=180, fill="#FF4500"</strong></td>
+                </tr>
+                <tr>
+                    <td>Clouds (&lt;ellipse&gt;)</td>
+                    <td><strong>N/A</strong></td>
+                    <td><strong>opacity="0.6", fill="#FFFFFF"</strong></td>
+                </tr>
+                <tr>
+                    <td>Birds (&lt;path&gt;)</td>
+                    <td><strong>N/A</strong></td>
+                    <td><strong>stroke="#333333", stroke-width="2"</strong></td>
+                </tr>
+                <tr>
+                    <td>Tree Apples (&lt;circle&gt;)</td>
+                    <td><strong>N/A</strong></td>
+                    <td><strong>r=5, fill="#FF3333"</strong></td>
+                </tr>
+                <tr>
+                    <td>Flowers (&lt;g&gt;)</td>
+                    <td><strong>N/A</strong></td>
+                    <td><strong>&lt;circle&gt;</strong> for petals, <strong>&lt;line&gt;</strong> for stems</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Wilson Yee</p>
+    <p>Some code in this project was developed with the assistance of Generative AI (Claude), with modifications and understanding demonstrated through commit history.</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

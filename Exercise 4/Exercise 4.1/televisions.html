@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Televisions | Appliance Energy Consumption</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/img/PowerIcon.png">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/PowerIcon.png" alt="Power logo">
+        Appliance Energy
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Data Visuals ▾</a>
+          <div class="dropdown-content" id="tvDropdown">
+            <a href="svg-house.html">Vector Graphics (SVG)</a>
+            <a href="televisions.html">Energy Data Story</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>The Hidden Cost of Bigger TVs</h1>
+    <section>
+      <p>
+        When shopping for a new TV, we are often drawn to larger screens and stunning picture quality. But before bringing that massive entertainment display home, have you considered how much it will add to your electricity bill? Let's use data to uncover the relationship between screen size, panel technology, and energy consumption.
+      </p>
+    </section>
+    <section>
+      <h2>Insight 1: Does a bigger screen really mean significantly more power?</h2>
+      <p>
+        Many people assume modern technology is highly efficient, so buying a slightly larger TV won't make a big difference. However, the data tells a different story.
+      </p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="assets/img/chart_size.png" alt="Average Energy Consumption by Screen Size" style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+      </div>
+      <p>
+        As clearly shown in the chart above, TV size is directly proportional to power consumption. <strong>The average annual energy consumption of a Large TV exceeds 700 kWh, which is nearly double that of a Medium TV (around 381 kWh).</strong> If you opt for a massive screen for a home theater experience, be prepared for a substantial increase in your electricity bill.
+      </p>
+    </section>
+    <section>
+      <h2>Insight 2: Are advanced OLED TVs more energy-efficient?</h2>
+      <p>
+        Since size dictates the baseline power consumption, what happens if we compare different panel technologies (LCD, LED, OLED) within the same size category?
+      </p>
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="assets/img/chart_tech.png" alt="Energy Consumption by Tech and Size" style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+      </div>
+      <p>
+        This chart breaks down energy consumption by panel technology across different size categories. Interestingly, for Medium-sized TVs, <strong>OLED displays (the yellow bar, averaging around 390 kWh) actually consume slightly more power than traditional LCD/LED TVs.</strong>
+      </p>
+      <p>
+        <strong>Conclusion:</strong> While OLED provides ultimate contrast and perfect blacks, it is not the most energy-efficient option. For consumers looking to save on electricity bills, <strong>purchasing a Medium-sized LED TV represents the best balance between picture quality and running costs.</strong>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> Wilson Yee</p>
+    <p>Some code in this project was developed with the assistance of Generative AI (Claude),
+       with modifications and understanding demonstrated through commit history.</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
