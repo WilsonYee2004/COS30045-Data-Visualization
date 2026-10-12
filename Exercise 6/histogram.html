@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Energy Dashboard | Appliance Energy</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/visualisation.css">
+  <link rel="icon" type="image/png" href="assets/img/PowerIcon.png">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/PowerIcon.png" alt="Power logo">
+        Appliance Energy
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Data Visuals ▾</a>
+          <div class="dropdown-content" id="tvDropdown">
+            <a href="televisions.html">Exercise 3 Energy Data Story</a>
+            <a href="svg-house.html">Exercise 4.1 Vector Graphics (SVG)</a>
+            <a href="d3-chart.html">Exercise 4.2-7 D3 CSV Bar Chart</a>
+            <a href="vertical-chart.html">Exercise 5 Dashboard</a>
+            <a href="histogram.html" class="active">Exercise 6 TV Dashboard</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>TV Energy Consumption Dashboard</h1>
+    <p style="max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; color: #555; text-align: justify;">
+      Welcome to our interactive energy analysis tool. As television screens grow larger and panel technologies evolve, understanding their power consumption is crucial for both your electricity bill and the environment. Use the tools below to explore the data.
+    </p>
+    
+    <!--Histogram-->
+    <section style="margin-bottom: 60px;">
+      <h2 style="color: #6b5738;">1. Frequency Distribution by Technology</h2>
+      <p style="max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6; color: #555; text-align: justify;">
+        Click the buttons below to filter the histogram. Notice how LED TVs dominate the market share in this dataset, while OLED TVs show a tighter, more specific energy footprint.
+      </p>
+      <div class="dashboard-panel">
+        <!--JavaScript (interactions.js) create a button to filter-->
+        <div id="filters_screen" style="margin-bottom: 20px; text-align: center;"></div>
+        <!--JavaScript (histogram.js) draw the histogram inside this div-->
+        <div id="histogram-chart" style="max-width: 800px; margin: 0 auto;"></div>
+      </div>
+      <p style="max-width: 800px; margin: 15px auto 0 auto; line-height: 1.6; color: #555; text-align: justify;">
+        The histogram reveals that the vast majority of televisions consume between 200 and 400 kWh annually. However, extreme outliers exist within the dataset, with some models consuming upwards of 1,000 kWh per year, heavily impacting household energy efficiency.
+      </p>
+    </section>
+
+    <!--Scatterplot-->
+    <section style="margin-bottom: 60px;">
+      <h2 style="color: #6b5738;">2. Efficiency vs. Star Rating</h2>
+      <p style="max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6; color: #555; text-align: justify;">
+        Hover over the data points to reveal specific screen sizes. This scatterplot reveals the correlation between a TV's official energy star rating and its actual energy consumption.
+      </p>
+      <div class="dashboard-panel">
+        <!--JavaScript (scatterplot.js) draw the scatterplot inside this div-->
+        <div id="scatterplot" style="max-width: 800px; margin: 0 auto;"></div>
+      </div>
+      <p style="max-width: 800px; margin: 15px auto 0 auto; line-height: 1.6; color: #555; text-align: justify;">
+        As observed in the scatterplot, higher star ratings generally correlate with lower energy consumption, but screen size plays a massive role. A highly-rated 85-inch TV might still use more power than a lower-rated 32-inch model, proving that physical screen size is the ultimate determining factor in overall power draw.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Wilson Yee</p>
+    <p>Some code in this project was developed with the assistance of Generative AI, with modifications and understanding demonstrated through commit history.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/shared-constants.js"></script>
+  <script src="assets/js/histogram.js"></script>
+  <script src="assets/js/scatterplot.js"></script>
+  <script src="assets/js/interactions.js"></script>
+  <script src="assets/js/load-data.js"></script>
+</body>
+</html>

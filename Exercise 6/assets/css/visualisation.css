@@ -1,0 +1,67 @@
+/*Exercise 4.1: My SVG House*/
+
+/*Set the size, color, and weight for X and Y axis text*/
+.axis-label {
+  font-size: 12px;
+  fill: #333; /*SVG use fill no color*/
+  font-weight: bold;
+  font-weight: bold;
+}
+
+/*Chart SVG Backgrounds*/
+#histogram-chart svg, #scatterplot svg {
+  background-color: white;
+  border-radius: 8px;
+}
+
+/*Exercise 6 TV Energy Dashboard*/
+/*Filter Buttons*/
+.filter-btn {
+  background-color: #fdfbf7;
+  color: #6b5738;
+  border: 2px solid #6b5738;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-btn:hover {
+  background-color: #f2ead9;
+  transform: translateY(-1px);
+}
+
+/*change the bar color if be select*/
+.filter-btn.active {
+  background-color: #6b5738;
+  color: #ffffff;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/*Histogram Bars*/
+/*Set animation duration for bar color changes*/
+.bar {
+  transition: fill 0.2s ease;
+}
+.bar:hover {
+  fill: #9c845e !important;
+  cursor: pointer;
+}
+
+/*Chart Grid Lines*/
+.grid line {
+  stroke: #e0e0e0;
+  stroke-dasharray: 4; /*Creates the dashed line effect*/
+}
+.grid path {
+  stroke-width: 0;  /* Hide the solid outer border*/
+}
+
+/*Tooltip*/
+#tooltip rect {
+  filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.25));
+}

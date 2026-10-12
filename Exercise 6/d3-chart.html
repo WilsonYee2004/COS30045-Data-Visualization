@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Brand Data Chart | Appliance Energy</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/visualisation.css">
+  <link rel="icon" type="image/png" href="assets/img/PowerIcon.png">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/PowerIcon.png" alt="Power logo">
+        Appliance Energy
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Data Visuals ▾</a>
+          <div class="dropdown-content" id="tvDropdown">
+            <a href="televisions.html">Exercise 3 Energy Data Story</a>
+            <a href="svg-house.html">Exercise 4.1 Vector Graphics (SVG)</a>
+            <a href="d3-chart.html" class="active">Exercise 4.2-7 D3 CSV Bar Chart</a>
+            <a href="vertical-chart.html">Exercise 5 Dashboard</a>
+            <a href="histogram.html">Exercise 6 TV Dashboard</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>TV Brand Market Distribution</h1>
+    <p style="max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; color: #555; text-align: justify;">
+      Understanding the landscape of appliance manufacturers is essential for analyzing market trends. This visualization explores the distribution of television brands within our dataset, rendered dynamically using D3.js.
+    </p>
+
+    <section style="margin-bottom: 60px;">
+      <h2 style="color: #6b5738;">Market Presence by Manufacturer</h2>
+      <p style="max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6; color: #555; text-align: justify;">
+        The horizontal bar chart below illustrates the total count of television models available for each brand. Hover over the bars to interact with the data.
+      </p>
+      
+      <div class="dashboard-panel">
+        <div class="responsive-svg-container" style="max-width: 800px; margin: 0 auto; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 20px;"></div>
+      </div>
+
+      <p style="max-width: 800px; margin: 15px auto 0 auto; line-height: 1.6; color: #555; text-align: justify;">
+        As the data clearly shows, Samsung, Kogan, and LG dominate the television market in this dataset. This heavy concentration among a few key manufacturers suggests a highly consolidated market where consumer choices and energy consumption baselines are primarily driven by these leading brands.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Wilson Yee</p>
+    <p>Some code in this project was developed with the assistance of Generative AI, with modifications and understanding demonstrated through commit history.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

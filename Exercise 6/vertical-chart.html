@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Dashboard | Appliance Energy</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/visualisation.css">
+  <link rel="icon" type="image/png" href="assets/img/PowerIcon.png">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/PowerIcon.png" alt="Power logo">
+        Appliance Energy
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Data Visuals ▾</a>
+          <div class="dropdown-content" id="tvDropdown">
+            <a href="televisions.html">Exercise 3 Energy Data Story</a>
+            <a href="svg-house.html">Exercise 4.1 Vector Graphics (SVG)</a>
+            <a href="d3-chart.html">Exercise 4.2-7 D3 CSV Bar Chart</a>
+            <a href="vertical-chart.html" class="active">Exercise 5 Dashboard</a>
+            <a href="histogram.html">Exercise 6 TV Dashboard</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Market & Energy Trends Dashboard</h1>
+    <p style="max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; color: #555; text-align: justify;">
+      Explore the historical context of appliance energy costs and the market distribution of televisions. These insights help us understand both the financial impact of electricity prices and consumer preferences for screen sizes and technologies.
+    </p>
+    
+    <section style="margin-bottom: 60px;">
+      <h2 style="color: #6b5738;">1. Average Energy Consumption by Screen Tech</h2>
+      <p style="max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6; color: #555; text-align: justify;">
+        When choosing a new 55-inch television, consumers often wonder which display technology is the most energy-efficient. The bar chart below compares the mean labelled energy consumption (kWh/year) across LCD, OLED, and LED panels to help answer this question.
+      </p>
+      <div class="dashboard-panel"> // vertical-chart.js
+        <div id="bar-chart" style="max-width: 800px; margin: 0 auto; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);"></div>
+      </div>
+      <p style="max-width: 800px; margin: 15px auto 0 auto; line-height: 1.6; color: #555; text-align: justify;">
+        As illustrated in the chart above, while OLED TVs offer superior contrast and perfect blacks, they actually consume slightly more power on average compared to traditional LED backlighting within the same size category. LCD panels remain the most energy-efficient option among the three.
+      </p>
+    </section>
+
+    <section style="margin-bottom: 60px;">
+      <h2 style="color: #6b5738;">2. Electricity Price Trends in Australia</h2>
+      <p style="max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6; color: #555; text-align: justify;">
+        Understanding appliance energy consumption becomes even more critical when we look at the historical context of electricity costs. The following line chart tracks the cost per megawatt hour (MWh) in Australia from 1998 to 2024.
+      </p>
+      <div class="dashboard-panel"> // line-chart.js
+        <div id="line-chart" style="max-width: 800px; margin: 0 auto; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);"></div>
+      </div>
+      <p style="max-width: 800px; margin: 15px auto 0 auto; line-height: 1.6; color: #555; text-align: justify;">
+        The data reveals that electricity prices remained relatively stable until the early 2010s. Since then, the market has experienced extreme volatility with significant spikes in recent years. This upward trend highlights the growing financial importance of choosing energy-efficient appliances for the modern household.
+      </p>
+    </section>
+
+    <section style="margin-bottom: 60px;">
+      <h2 style="color: #6b5738;">3. TV Market Share by Size Category</h2>
+      <p style="max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6; color: #555; text-align: justify;">
+        Beyond panel technology, the physical size of a television is the largest factor in its power draw. The donut chart below visualizes the proportion of small, medium, and large TV models available in our current dataset.
+      </p>
+      <div class="dashboard-panel"> // donut-chart.js
+        <div id="donut-chart" style="max-width: 800px; margin: 0 auto; background-color: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);"></div>
+      </div>
+      <p style="max-width: 800px; margin: 15px auto 0 auto; line-height: 1.6; color: #555; text-align: justify;">
+        It is clear that medium and large televisions now dominate the consumer market. As consumer preferences shift away from smaller screens towards massive home entertainment setups, the overall baseline for household energy consumption naturally increases, making the efficiency of these larger panels more important than ever.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Wilson Yee</p>
+    <p>Some code in this project was developed with the assistance of Generative AI, with modifications and understanding demonstrated through commit history.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/vertical-chart.js"></script>
+  <script src="assets/js/line-chart.js"></script>
+  <script src="assets/js/donut-chart.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
