@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Dashboard | Appliance Energy</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/img/PowerIcon.png">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/PowerIcon.png" alt="Power logo">
+        Appliance Energy
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Data Visuals ▾</a>
+          <div class="dropdown-content" id="tvDropdown">
+            <a href="svg-house.html">Vector Graphics (SVG)</a>
+            <a href="televisions.html">Energy Data Story</a>
+            <a href="d3-chart.html">D3 CSV Bar Chart</a>
+            <a href="vertical-chart.html" class="active">Week 5 Dashboard</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Week 5: D3 Charts Dashboard</h1>
+    
+    <section>
+      <h2>Exercise 5.1: Vertical Bar Chart</h2>
+      <p>Average energy consumption of 55-inch TVs based on different screen types.</p>
+      <div class="dashboard-panel">
+        <div id="bar-chart" style="max-width: 800px; margin: 0 auto;"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Exercise 5.2: Scatter Plot & Line Chart</h2>
+      <p>Cost per megawatt hour of electricity in Australia (1998-2024).</p>
+      <div class="dashboard-panel">
+        <div id="line-chart" style="max-width: 800px; margin: 0 auto;"></div>
+      </div>
+    </section>
+
+    <!-- 這是您少加的 Exercise 5.3 區塊 -->
+    <section>
+      <h2>Exercise 5.3: Donut Chart</h2>
+      <p>Proportion of small, medium and large TV models.</p>
+      <div class="dashboard-panel">
+        <div id="donut-chart" style="max-width: 800px; margin: 0 auto;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Wilson Yee</p>
+    <p>Some code in this project was developed with the assistance of Generative AI, with modifications and understanding demonstrated through commit history.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/vertical-chart.js"></script>
+  <script src="assets/js/line-chart.js"></script>
+  <!-- 這裡必須引入 donut-chart.js 才會執行畫圖 -->
+  <script src="assets/js/donut-chart.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
