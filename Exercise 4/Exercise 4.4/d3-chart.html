@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Brand Data Chart | Appliance Energy Consumption</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/img/PowerIcon.png">
+  <style>
+    .chart-container {
+      background: var(--white);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/PowerIcon.png" alt="Power logo">
+        Appliance Energy
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" onclick="toggleDropdown(event)">Data Visuals ▾</a>
+          <div class="dropdown-content" id="tvDropdown">
+            <a href="svg-house.html">Vector Graphics (SVG)</a>
+            <a href="televisions.html">Energy Data Story</a>
+            <a href="d3-chart.html" class="active">D3 CSV Bar Chart</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>TV Brand Count Data Visualisation (Exercise 4.4)</h1>
+    <section>
+      <p>
+        This page uses <strong>D3.js v7</strong> to asynchronously load television brand count data from a CSV file, process it, and dynamically render visual elements inside a responsive SVG canvas.
+      </p>
+    </section>
+
+    <section>
+      <h2>Brand Distribution Chart</h2>
+      <div class="chart-container">
+        <div class="responsive-svg-container"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Wilson Yee</p>
+    <p>Some code in this project was developed with the assistance of Generative AI, with modifications and understanding demonstrated through commit history.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
